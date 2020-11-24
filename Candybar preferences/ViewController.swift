@@ -92,7 +92,27 @@ extension ViewController: NSToolbarDelegate {
         return toolbarItem
     }
     
-    @objc func showGeneral() {}
-    @objc func showPrivacy() {}
-    @objc func showTipJar() {}
+    @objc func showGeneral() {
+        guard let scene = view.window?.windowScene else {
+            return
+        }
+        
+        scene.title = "General"
+    }
+    
+    @objc func showPrivacy() {
+        guard let scene = view.window?.windowScene else {
+            return
+        }
+        
+        scene.title = "Privacy"
+    }
+    
+    @objc func showTipJar() {
+        guard let scene = view.window?.windowScene else {
+            return
+        }
+        
+        scene.title = "Tip Jar"
+    }
 }
